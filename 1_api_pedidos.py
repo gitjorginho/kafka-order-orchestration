@@ -30,7 +30,7 @@ try:
             "quantidade": quantidade
         }
 
-        producer.send('pedidos.criados', key=pedido_id, value=evento)
+        producer.send('pedidos.iniciados', key=pedido_id, value=evento)
         producer.flush()
 
         print(f"[202 Accepted] Pedido {pedido_id} enviado para processamento!\n")

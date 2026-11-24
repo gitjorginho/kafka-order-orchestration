@@ -1,7 +1,7 @@
 services:
   kafka:
     image: apache/kafka:latest
-    container_name: kafka-broker
+    container_name: kafka-broker_orq
     ports:
       - "9092:9092"
     environment:
@@ -20,7 +20,7 @@ services:
 
   kafka-ui:
     image: provectuslabs/kafka-ui:latest
-    container_name: kafka-ui
+    container_name: kafka-ui_orq
     depends_on:
       - kafka
     ports:
